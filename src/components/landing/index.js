@@ -8,9 +8,9 @@ function LandingComponent() {
   return (
     <>
       <div className="container">
-        <h1 style={{ fontWeight: "bold" }}>Ada Health</h1>
+        <h1 style={{ fontWeight: "bold", fontSize: "40px"}}>Ada Health</h1>
         <img className="logo" src={Logo} alt="logo" />
-        <button onClick={() => navigate("/login")} className="button-primary">
+        <button onClick={() => navigate("/")} className="button-primary">
           Get Started
         </button>
         <div className="button-container">
