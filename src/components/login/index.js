@@ -1,40 +1,54 @@
-import React from 'react'
+import React from 'react'    
 import { useNavigate } from "react-router-dom";
 import Logo from "../../asset/image/icon.png";
 import "./index.css";
-import { useState } from 'react';
-
+import { useState } from 'react';   
 
 function LoginComponent() {
   const navigate = useNavigate()
 
-  const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue] = useState({
+    email: '',
+    password: '',
+  });
 
   const  handleChange = (event) => {
-		setInputValue(event.target.value);
+    let field = event.target.name
+    let value = event.target.value
+
+    setInputValue({
+      ...inputValue,
+      [field] : value
+    })
 	};
 
+    function SubmitLogin() {
+      console.log(inputValue);
+    }
+
   return (
+
+
     <>
-    <div className="container">
-      <h1 style={{ fontWeight: "bold" }}>Ada Health</h1>
+    <div className="container">    
+      <h1 style={{ fontWeight: "bold" }}>LOGIN</h1>
       <img className="logo" src={Logo} alt="logo" />
 
-      <form>
-	      <label>Email
+      <form className='login'>
+	      <label className='label-login'>Email
         <br></br>
-	      <input  type="text"  value={inputValue} onChange={handleChange} />
+	      <input  type="email" name='email' onChange={handleChange} className='login-form'/>
+	      </label>
+      </form>
+      <br></br>
+      <form>
+	      <label className='label-login'>Password
+        <br></br>
+	      <input  type="password" name='password' onChange={handleChange} className='login-form' />
 	      </label>
       </form>
 
-      <form>
-	      <label>Password
-        <br></br>
-	      <input  type="text"  value={inputValue} onChange={handleChange} />
-	      </label>
-      </form>
-
-      <button onClick={() => navigate("/login")} className="button-primary">
+      <button onClick={() => SubmitLogin()} className="button-primary-login">
         LOGIN
       </button>
     </div>
