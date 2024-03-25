@@ -4,7 +4,6 @@ import LandingComponent from '../components/landing'
 function Landing() {
   return (
     <LandingComponent/>
-    
   )
 }
 
