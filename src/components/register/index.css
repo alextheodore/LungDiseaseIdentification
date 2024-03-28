@@ -56,3 +56,13 @@
     rgba(235, 0, 255, 1) 85%
   );
 }
+
+.header-register {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+  height: 150px;
+  margin-top: 1px;
+  /* border: 1px solid #c3c3c3; */
+  align-items: center;
+}

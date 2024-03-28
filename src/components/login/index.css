@@ -56,3 +56,25 @@
     rgba(235, 0, 255, 1) 85%
   );
 }
+
+.header-login {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+  height: 160px;
+  margin-top: -90px;
+  /* border: 1px solid #c3c3c3; */
+  align-items: center;
+}
+
+/* .button-back {
+  border: 1px solid #c3c3c3;
+}
+
+.text-login {
+  border: 1px solid #c3c3c3;
+}
+
+.empty {
+  border: 1px solid #c3c3c3;
+} */
